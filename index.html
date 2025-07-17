@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" async></script>
+  <title>Saveur - Fine Dining Experience</title>
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <nav>
+      <a href="#" class="logo">Saveur</a>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="mobile-menu-toggle">☰</button>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay"></div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+      <button class="mobile-menu-close">×</button>
+      <ul class="mobile-menu-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Home -->
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-container">
+        <div class="hero-content">
+          <h1>Exquisite Dining</h1>
+          <p>Where Culinary Artistry Meets Unforgettable Experiences</p>
+          <a href="#menu" class="cta-button">Explore Menu</a>
+        </div>
+        <div class="hero-image">
+          <img src="Dining Setup.jpg" alt="Elegant restaurant interior with fine dining setup">
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="container">
+        <h2>Our Story</h2>
+        <p>At Saveur, we believe that dining is more than just a meal—it's an experience that engages all your senses. Our passionate chefs craft each dish with precision, using only the finest locally-sourced ingredients to create flavors that tell a story.</p>
+
+        <div class="features">
+          <div class="feature">
+            <div class="feature-icon">🍽️</div>
+            <h3>Artisan Cuisine</h3>
+            <p>Every dish is crafted with meticulous attention to detail, combining traditional techniques with modern innovation.</p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">🌿</div>
+            <h3>Fresh Ingredients</h3>
+            <p>We source the finest seasonal ingredients from local farms and trusted suppliers to ensure exceptional quality.</p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">✨</div>
+            <h3>Elegant Ambiance</h3>
+            <p>Our sophisticated atmosphere provides the perfect backdrop for intimate dinners and special celebrations.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="menu" class="menu-preview">
+      <div class="container">
+        <h2>Signature Dishes</h2>
+        <p>A taste of our culinary excellence</p>
+
+        <div class="menu-grid">
+          <div class="menu-item">
+            <div class="menu-item-image">
+              <img src="Truffle Risotto.jpg" alt="Truffle Risotto with parmesan and herbs">
+            </div>
+            <div class="menu-item-content">
+              <h3>Truffle Risotto</h3>
+              <p>Creamy arborio rice with black truffle, parmesan, and fresh herbs</p>
+              <div class="price">$32</div>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-image">
+              <img src="Seared Duck Breast.jpg" alt="Seared duck breast with cherry gastrique">
+            </div>
+            <div class="menu-item-content">
+              <h3>Seared Duck Breast</h3>
+              <p>Pan-seared duck with cherry gastrique and roasted vegetables</p>
+              <div class="price">$28</div>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-image">
+              <img src="Lobster Thermidor.jpg" alt="Lobster thermidor with cream sauce">
+            </div>
+            <div class="menu-item-content">
+              <h3>Lobster Thermidor</h3>
+              <p>Classic French preparation with cognac cream sauce</p>
+              <div class="price">$45</div>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-image">
+              <img src="Chocolate Soufflé.jpg" alt="Chocolate soufflé with vanilla ice cream">
+            </div>
+            <div class="menu-item-content">
+              <h3>Chocolate Soufflé</h3>
+              <p>Rich dark chocolate soufflé with vanilla bean ice cream</p>
+              <div class="price">$14</div>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-image">
+              <img src="Coq au Vin.jpg" alt="Coq au Vin">
+            </div>
+            <div class="menu-item-content">
+              <h3>Coq au Vin</h3>
+              <p>Braised chicken in red wine with mushrooms, pearl onions, and bacon</p>
+              <div class="price">$35</div>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-image">
+              <img src="Beef Wellington.jpg" alt="Beef Wellington">
+            </div>
+            <div class="menu-item-content">
+              <h3>Beef Wellington</h3>
+              <p>Tender beef fillet coated with pâté and duxelles, wrapped in puff pastry</p>
+              <div class="price">$48</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Main Order Container -->
+  <div class="order-page" id="orderPage">
+    <div class="order-container">
+      <!-- Order Header Section -->
+      <div class="order-header">
+        <button class="close-order" onclick="closeOrderPage()">×</button>
+        <h2>Place Your Order</h2>
+        <p>Complete your order details below</p>
+      </div>
+
+      <!-- Selected Item Display -->
+      <div class="selected-item" id="selectedItem">
+        <img id="selectedItemImage" src="" alt="Selected dish">
+        <div class="item-details">
+          <h3 id="selectedItemName"></h3>
+          <p id="selectedItemDescription"></p>
+          <div class="item-price" id="selectedItemPrice"></div>
+        </div>
+      </div>
+
+      <!-- Order Form Section -->
+      <form class="order-form" id="orderForm">
+        <!-- Quantity Controls -->
+        <div class="form-group">
+          <label for="quantity">Quantity</label>
+          <div class="quantity-controls">
+            <button type="button" class="quantity-btn" onclick="changeQuantity(-1)">-</button>
+            <input type="number" id="quantity" class="quantity-input" value="1" min="1" readonly>
+            <button type="button" class="quantity-btn" onclick="changeQuantity(1)">+</button>
+          </div>
+        </div>
+
+        <!-- Customer Information -->
+        <div class="form-section">
+          <h3>Customer Information</h3>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="firstName">First Name *</label>
+              <input type="text" id="firstName" name="firstName" required>
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last Name *</label>
+              <input type="text" id="lastName" name="lastName" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number *</label>
+              <input type="tel" id="phone" name="phone" required>
+            </div>
+          </div>
+        </div>
+
+        <!-- Delivery Information -->
+        <div class="form-section">
+          <h3>Delivery Information</h3>
+          <div class="form-group">
+            <label for="address">Delivery Address *</label>
+            <textarea id="address" name="address" rows="3" required placeholder="Enter your full delivery address"></textarea>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="city">City *</label>
+              <input type="text" id="city" name="city" required>
+            </div>
+            <div class="form-group">
+              <label for="zipCode">ZIP Code *</label>
+              <input type="text" id="zipCode" name="zipCode" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="orderType">Order Type *</label>
+            <select id="orderType" name="orderType" required>
+              <option value="">Select order type</option>
+              <option value="delivery">Delivery</option>
+              <option value="pickup">Pickup</option>
+              <option value="dine-in">Dine In</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Special Instructions -->
+        <div class="form-group">
+          <label for="specialInstructions">Special Instructions</label>
+          <textarea id="specialInstructions" name="specialInstructions" rows="3" placeholder="Any special dietary requirements or cooking preferences"></textarea>
+        </div>
+
+        <!-- Payment Method Selection -->
+        <div class="form-section">
+          <h3>Payment Method</h3>
+          <div class="payment-methods">
+            <label class="payment-option">
+              <input type="radio" name="paymentMethod" value="credit-card" required>
+              <span class="payment-icon">💳</span>
+              <span>Credit Card</span>
+            </label>
+            <label class="payment-option">
+              <input type="radio" name="paymentMethod" value="debit-card" required>
+              <span class="payment-icon">💳</span>
+              <span>Debit Card</span>
+            </label>
+            <label class="payment-option">
+              <input type="radio" name="paymentMethod" value="paypal" required>
+              <span class="payment-icon">💰</span>
+              <span>PayPal</span>
+            </label>
+            <label class="payment-option">
+              <input type="radio" name="paymentMethod" value="apple-pay" required>
+              <span class="payment-icon">📱</span>
+              <span>Apple Pay</span>
+            </label>
+            <label class="payment-option">
+              <input type="radio" name="paymentMethod" value="google-pay" required>
+              <span class="payment-icon">📱</span>
+              <span>Google Pay</span>
+            </label>
+            <label class="payment-option">
+              <input type="radio" name="paymentMethod" value="cash" required>
+              <span class="payment-icon">💵</span>
+              <span>Cash on Delivery</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Order Summary -->
+        <div class="order-summary">
+          <h3>Order Summary</h3>
+          <div class="summary-row">
+            <span>Item Total:</span>
+            <span id="itemTotal">$0.00</span>
+          </div>
+          <div class="summary-row">
+            <span>Delivery Fee:</span>
+            <span id="deliveryFee">$5.00</span>
+          </div>
+          <div class="summary-row">
+            <span>Tax (8%):</span>
+            <span id="tax">$0.00</span>
+          </div>
+          <div class="summary-row summary-total">
+            <span>Total:</span>
+            <span id="finalTotal">$0.00</span>
+          </div>
+        </div>
+
+        <button type="submit" class="submit-order">Place Order</button>
+      </form>
+    </div>
+
+    <!-- Payment Method Pages -->
+    <!-- Card Payment Page -->
+    <div id="cardPaymentPage" class="payment-method-page">
+      <div class="payment-content">
+        <h3>Pay with Card</h3>
+
+        <div class="card-form">
+          <div class="form-group">
+            <label for="cardNumber">Card Number</label>
+            <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456" maxlength="16">
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="cardExpiry">Expiry Date</label>
+              <input type="text" id="cardExpiry" placeholder="MM/YY" maxlength="5">
+            </div>
+            <div class="form-group">
+              <label for="cardCvv">CVV</label>
+              <input type="text" id="cardCvv" placeholder="123" maxlength="3">
+            </div>
+          </div>
+
+          <div class="payment-actions">
+            <button id="processCardPayment" class="submit-order">Pay Now</button>
+            <button class="back-button" onclick="backToOrderForm()">← Back to Order</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Transfer Payment Page -->
+    <div id="transferPaymentPage" class="payment-method-page">
+      <div class="payment-content">
+        <h3>Bank Transfer</h3>
+        <div class="transfer-instructions">
+          <p>Please transfer the exact amount to:</p>
+          <div class="bank-details">
+            <div class="detail-row">
+              <span>Bank Name:</span>
+              <span>Opay</span>
+            </div>
+            <div class="detail-row">
+              <span>Account Name:</span>
+              <span>Emmanuel Etim Ukpong</span>
+            </div>
+            <div class="detail-row">
+              <span>Account Number:</span>
+              <span>9068482385</span>
+            </div>
+            <div class="detail-row">
+              <span>Amount:</span>
+              <span id="transferAmount">$0.00</span>
+            </div>
+          </div>
+          <p class="note">Your order will be processed once payment is confirmed.</p>
+        </div>
+        <div class="payment-actions">
+          <button id="confirmTransfer" class="submit-order">I've Made the Transfer</button>
+          <button class="back-button" onclick="backToOrderForm()">← Back to Order</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Contact</h3>
+        <p>123 Culinary Street</p>
+        <p>Gourmet District, NY 10001</p>
+        <p>Phone: (555) 123-4567</p>
+        <p>Email: info@saveur.com</p>
+      </div>
+      <div class="footer-section">
+        <h3>Hours</h3>
+        <p>Monday - Thursday: 5:00 PM - 10:00 PM</p>
+        <p>Friday - Saturday: 5:00 PM - 11:00 PM</p>
+        <p>Sunday: 4:00 PM - 9:00 PM</p>
+      </div>
+      <div class="footer-section">
+        <h3>Follow Us</h3>
+        <a href="#">Instagram</a>
+        <a href="#">Facebook</a>
+        <a href="#">Twitter</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
